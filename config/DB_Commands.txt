@@ -1,0 +1,29 @@
+create database bookstore;
+CREATE USER 'bookstore_app'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON bookstore.* TO 'bookstore_app'@'localhost' with grant option;
+CREATE USER 'bookstore_app'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON bookstore.* TO 'bookstore_app'@'%' WITH GRANT OPTION;
+
+describe mysql.user;
+select host,user from mysql.user;
+
+use bookstore;
+show tables;
+
+CREATE TABLE Book (
+    ID int NOT NULL AUTO_INCREMENT,
+    Title varchar(255) NOT NULL,
+    Author varchar(255),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE User (
+    USERID varchar(50),
+    Password varchar(50) NOT NULL,
+    FirstName varchar(255),
+    LastName varchar(255),
+    Age int,
+    PRIMARY KEY (USERID)
+);
+
+ALTER TABLE Book AUTO_INCREMENT = 1;
