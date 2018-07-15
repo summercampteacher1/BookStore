@@ -1,6 +1,8 @@
 package com.bookstore.model;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
 	
 	public Book(int id,String title,String author) {
 		this.id = id;

@@ -1,6 +1,8 @@
 package com.bookstore.model;
 
-public class User {
+import java.io.Serializable;
+
+public class User  implements Serializable {
 	private String userid;
 	private String password;
 	private String firstName;

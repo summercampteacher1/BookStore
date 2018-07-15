@@ -1,6 +1,8 @@
 package com.bookstore.model;
 
-public class UserMessage {
+import java.io.Serializable;
+
+public class UserMessage  implements Serializable {
 	private String message;
 	private int errorCode;
 	
