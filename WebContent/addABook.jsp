@@ -16,7 +16,7 @@
 
 <jsp:include page="menu.jsp" />
 
-<form action="/bookstore/controller?action=addABook" method="post" >
+<form action="/controller?action=addABook" method="post" >
 	<table border="0">
 		<tr>
 			<td>

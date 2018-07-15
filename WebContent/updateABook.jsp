@@ -28,7 +28,7 @@ for(Book book:books) {
 
 <jsp:include page="menu.jsp" />
 
-<form action="/bookstore/controller?action=updateBooks&id=<%=selectedBook.getId()%>" method="post" >
+<form action="/controller?action=updateBooks&id=<%=selectedBook.getId()%>" method="post" >
 	<table border="0">
 		<tr>
 			<td>

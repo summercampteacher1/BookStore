@@ -19,8 +19,8 @@ import com.bookstore.model.User;
 
 public class LoginDAO {
 	
-	//private static final String MYSQL_DB_DRIVER = "com.mysql.jdbc.Driver";
-	private static final String JDBC_URL = "jdbc:mysql://localhost:3306/bookstore?useSSL=false";
+	private static final String MYSQL_DB_DRIVER = "com.mysql.jdbc.Driver";
+	private static final String JDBC_URL = "jdbc:mysql://db:3306/bookstore";
 	private static final String JDBC_USERID = "bookstore_app";
 	private static final String JDBC_PASSWORD = "password";
 	private static final LoginDAO singleton = new LoginDAO();
@@ -40,7 +40,7 @@ public class LoginDAO {
 	
 	private void initialize() {
 		try {
-			//Class.forName(MYSQL_DB_DRIVER).newInstance();
+			Class.forName(MYSQL_DB_DRIVER).newInstance();
 			connection = DriverManager.getConnection(JDBC_URL, JDBC_USERID, JDBC_PASSWORD);
 			initialized = true;
 		} catch (Exception ex) {

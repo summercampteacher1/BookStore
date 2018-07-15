@@ -48,9 +48,9 @@ for (int i = 0; i < books.size();i++) {
 			<%=book.getAuthor()%>
 		</td>
 		<td>
-			<a href="/bookstore/updateABook.jsp?id=<%=book.getId() %>">Update</a>
+			<a href="/updateABook.jsp?id=<%=book.getId() %>">Update</a>
 			&nbsp;
-			<a href="/bookstore/controller?action=deleteBooks&id=<%=book.getId() %>">Delete</a>
+			<a href="/controller?action=deleteBooks&id=<%=book.getId() %>">Delete</a>
 		</td>
 	</tr>
 	
